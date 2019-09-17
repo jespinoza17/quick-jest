@@ -2,15 +2,12 @@ import React, {useState, useEffect} from 'react';
 // import {UnControlled as CodeMirror} from 'react-codemirror2'
 import CodeMirror from 'react-codemirror';
 
-// import 'codemirror-formatting';
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/lib/codemirror.js';
-
+import 'codemirror/theme/dracula.css';
 import 'codemirror/mode/javascript/javascript.js';
 
 let beautify = require('js-beautify').js;
 
-const value = 'describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")}; describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};'
+const value = 'describe("addUser","a","bunch","of","useless","parameters", () => { it("should return an object", () => {console.log("Type your test cases here")}) }); function() { console.log("arrow syntax?")}; describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};'
 
 const mirror = (props) => {
   const [js, setJs] = useState('');
@@ -30,10 +27,11 @@ const mirror = (props) => {
         options={{
           value: js,
           mode: 'javascript',
-          theme: 'material',
+          theme: 'dracula',
           lineNumbers: true,
           readOnly: true,
           tabsize: 2,
+          lineWrapping: true
         }}
       />
     </div>
