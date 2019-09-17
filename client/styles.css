@@ -1,0 +1,36 @@
+.wrapper{
+  background:lightcyan;
+}
+
+.code{
+  background:black;
+  grid-area: code;
+  border-radius: 10px;
+}
+
+.main-nav ul {
+  background: pink;
+  display:grid;
+  grid-gap:20px;
+  justify-items:center;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 40px;
+  align-items: center;
+  list-style:none;
+}
+
+.main-area {
+  display:grid;
+  grid-template-areas:
+  'input-area code'
+  'input-area code'
+  ;
+
+}
+
+.input-area{
+  background-color: lightskyblue;
+  grid-area: input-area;
+  min-height: 50em;
+  border-radius: 10px;
+}

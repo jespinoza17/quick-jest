@@ -1,10 +1,12 @@
 import React from 'react';
-
+import Nav from './Nav.jsx';
+import Main from './Main.jsx';
 
 function App() {
   return(
-    <div className = 'main-wrapper'>
-      Hello World! Jimmy! LOL!
+    <div className = 'wrapper'>
+      <Nav/>
+      <Main/>
     </div>
   )
 }
