@@ -1,10 +1,17 @@
-import React from 'react';
-
-
+import React, {useState} from 'react';
+import Right from './Right.jsx'
+import Left from './Left.jsx'
+import './styles.css'
+import 'tachyons'
 function App() {
+  const [State, setState] = useState(null)
+  const addFun = () =>{
+
+  }
   return(
-    <div className = 'main-wrapper'>
-      Hello World! Jimmy! LOL!
+    <div>
+    <Right/>
+    <Left/>
     </div>
   )
 }

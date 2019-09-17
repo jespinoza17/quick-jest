@@ -1,0 +1,28 @@
+.butt{
+    height: 25px;
+    width: 100px;
+    float:right;
+    /* bg-light-green ma2 grow bw2 shadow-5 */
+    background: lightgreen;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    
+}
+.Right{
+    position: relative;
+    background:lightblue;
+    justify-content: right;
+    float:right;
+    height:200px;
+    width: 400px
+}
+.Left{
+    position: relative;
+    justify-content: right;
+    float:left;
+    background:darkblue;
+    height:200px;
+    width: 400px
+}
