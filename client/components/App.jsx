@@ -21,7 +21,7 @@ function App() {
 
     <div className = 'wrapper'>
       <Nav/>
-      <Main funcArray = {functions} setFunc = {setFunc} setTest = {setTest} inputTest = {inputTest}/>
+      <Main funcArray = {functions} setFunc = {setFunc} setTest = {setTest} inputTest = {inputTest} setInput = {setInput} inputField = {inputField}/>
     </div>
       )
 }

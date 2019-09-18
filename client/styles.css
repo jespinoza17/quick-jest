@@ -12,22 +12,26 @@
 }
 .Func{
   position: relative;
-  justify-content: right;
+  justify-content: center;
   float:left;
   background:lightblue;
-  width: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 
 #add-func{
   width:100%;
-  background-color:pink;
+  background-color:rgb(43, 43, 43);
   height: 50px;
   display:flex;
   flex-direction:row;
   justify-content:center;
   align-items:center;
 }
+
+
 .wrapper{
 }
 
@@ -63,6 +67,7 @@
   min-height: 40px;
   align-items: center;
   list-style:none;
+  margin:0;
 }
 
 .main-nav li {
@@ -78,7 +83,7 @@
 .main-area {
   display:grid;
   grid-template-areas:
-  'input-area code'
+  'input-area input-area code'
   ;
 
 }
@@ -89,5 +94,11 @@
   grid-area: input-area;
   min-height: 50em;
   border-radius: 10px;
+  overflow-y:scroll;
+  max-height: 8em;
 }
 
+#func-wrapper{
+  display:grid;
+  grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+}

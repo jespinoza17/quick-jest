@@ -18,11 +18,6 @@ function Func(props) {
 
   return(
    <div className ='Func dib br3 pa3 ma2 bw2 shadow-5'>
-      <h3>
-        {props.name}
-      </h3>
-      {testArr} 
-        
       <input id="name" className="input-reset ba b--black-20 pa2 mb2 db w-100" 
       type="text" aria-describedby="name-desc" onChange={(e)=>{  
        props.setTest(e.target.value);
@@ -35,6 +30,11 @@ function Func(props) {
       <button className='deleteTest bg-red ma2 grow bw2 shadow-5' onClick={handleDelete}>
         delete test
       </button>
+      <h3>
+        {props.name}
+      </h3>
+      {testArr} 
+        
     </div>
   )
 }
