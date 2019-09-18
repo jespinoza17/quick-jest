@@ -1,14 +1,14 @@
 import React from 'react';
-import Mirror from './Mirror.jsx';
-
+import Nav from './Nav.jsx';
+import Main from './Main.jsx';
 
 function App() {
   return(
-    <div className = 'main-wrapper'>
-      Hello World! Jimmy! LOL!
-      <Mirror/>
+    <div className = 'wrapper'>
+      <Nav/>
+      <Main/>
     </div>
-  )
+      )
 }
 
 export default App

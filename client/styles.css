@@ -1,3 +1,66 @@
+.wrapper{
+}
+
+.code{
+  background:lightcyan;
+  grid-area: code;
+  border-radius: 10px;
+}
+
+.code-bottom {
+  height:100%;
+  display:flex;
+  justify-content:center;
+  margin-top:3em;
+}
+
+#generate-btn{
+  border-radius: 7px;
+  min-height: 30px;
+  min-width: 70px;
+  background-color:rgb(105, 191, 231);
+  color:white;
+  font-weight:bold;
+
+}
+
+.main-nav ul {
+  background: pink;
+  display:grid;
+  grid-gap:20px;
+  justify-items:center;
+  grid-template-columns: 1fr 1fr 1fr 8fr;
+  min-height: 40px;
+  align-items: center;
+  list-style:none;
+}
+
+.main-nav li {
+  background:lightcyan;
+  border-radius: 6px;
+  min-width: 80px;
+  min-height: 30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.main-area {
+  display:grid;
+  grid-template-areas:
+  'input-area code'
+  'input-area code'
+  ;
+
+}
+
+.input-area{
+  background-color: lightskyblue;
+  grid-area: input-area;
+  min-height: 50em;
+  border-radius: 10px;
+  min-width: 500px;
+}
 /* ambiance theme for codemirror */
 /* BASICS */
 
@@ -7,6 +70,7 @@
   height: 300px;
   color: black;
   direction: ltr;
+  height: 100%;
 }
 
 /* PADDING */
