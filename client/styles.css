@@ -69,7 +69,6 @@
   display:grid;
   grid-template-areas:
   'input-area code'
-  'input-area code'
   ;
 
 }
@@ -79,7 +78,6 @@
   grid-area: input-area;
   min-height: 50em;
   border-radius: 10px;
-  min-width: 500px;
 }
 /* ambiance theme for codemirror */
 /* BASICS */
@@ -87,10 +85,9 @@
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   font-family: monospace;
-  height: 300px;
+  height: 500px;
   color: black;
   direction: ltr;
-  height: 100%;
 }
 
 /* PADDING */
@@ -114,7 +111,7 @@
   background-color: #f7f7f7;
   white-space: nowrap;
 }
-.CodeMirror-linenumbers {}
+
 .CodeMirror-linenumber {
   padding: 0 3px 0 5px;
   min-width: 20px;

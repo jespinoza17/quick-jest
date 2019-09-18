@@ -14,6 +14,7 @@ const mirror = (props) => {
   // let date = new Date();
 
   useEffect(() => {
+    
     let formattedJs = beautify(value, {indent_size: 2});
     setJs(formattedJs);
     // console.log('useEffect', Date.now());
@@ -31,7 +32,8 @@ const mirror = (props) => {
           lineNumbers: true,
           readOnly: true,
           tabsize: 2,
-          lineWrapping: true
+          lineWrapping: true,
+          autoRefresh:true,
         }}
       />
       <div className = 'code'>
