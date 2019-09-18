@@ -1,6 +1,9 @@
+
 import React, {useState} from 'react';
 import Right from './Right.jsx'
 import Func from './Func.jsx'
+import Nav from './Nav.jsx';
+import Main from './Main.jsx';
 import './styles.css'
 import 'tachyons'
 function App() {
@@ -26,20 +29,12 @@ function App() {
     />
   })
   return(
-    <div style={{width:300}}>
-      {newFuncList}
-      <div>
-        <div className='dib br3 pa3 ma2 bw2 shadow-5'>
-          <input id="name" className="input-reset ba b--black-20 pa2 mb2 db w-100" 
-            type="text" aria-describedby="name-desc" value={inputField} onChange={inputChange}>
-          </input>
-          <button className='addTest bg-light-green ma2 grow bw2 shadow-5' onClick={addFun}>
-            add
-          </button>
-        </div>
-      </div>
+
+    <div className = 'wrapper'>
+      <Nav/>
+      <Main/>
     </div>
-  )
+      )
 }
 
 export default App
