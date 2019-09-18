@@ -1,13 +1,13 @@
 import React from 'react';
-import Code from './Code.jsx'
 import Input from './Input.jsx';
+import Mirror from './Mirror.jsx';
 
 
 export default function Main() {
   return(
     <div className = 'main-area'>
      <Input/>
-     <Code/>
+     <Mirror/>
     </div>
   )
 }

@@ -22,7 +22,7 @@ const mirror = (props) => {
   })
 
   return (
-    <div id='mirror'>
+    <div className='code'>
       <CodeMirror
         options={{
           value: js,
@@ -34,6 +34,11 @@ const mirror = (props) => {
           lineWrapping: true
         }}
       />
+      <div className = 'code'>
+        <div className = 'code-bottom'>
+          <button id = 'generate-btn'>Generate Jest Tests</button>
+        </div>
+      </div>
     </div>
   )
 }
