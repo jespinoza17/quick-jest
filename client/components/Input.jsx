@@ -13,7 +13,16 @@ export default function Input(props) {
 
   return(
     <div className = 'input-area'>
+      <div id = 'add-func'>
+        <input type = 'text'>
+
+        </input>
+        <button>
+          add func
+        </button>
+      </div>
       {newFuncList}
+    
     </div>
   )
 }

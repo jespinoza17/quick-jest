@@ -18,6 +18,16 @@
   width: 300px;
 }
 
+
+#add-func{
+  width:100%;
+  background-color:pink;
+  height: 50px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+}
 .wrapper{
 }
 

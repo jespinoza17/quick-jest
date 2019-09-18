@@ -15,9 +15,7 @@ export default function Nav() {
       <ul>
         {navItems}
        
-          <button id = 'add-func'>
-            Add a function
-          </button>
+  
    
       </ul>
     </nav>
