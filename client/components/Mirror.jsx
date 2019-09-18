@@ -7,7 +7,7 @@ import 'codemirror/mode/javascript/javascript.js';
 
 let beautify = require('js-beautify').js;
 
-const value = 'describe("addUser","a","bunch","of","useless","parameters", () => { it("should return an object", () => {console.log("Type your test cases here")}) }); function() { console.log("arrow syntax?")}; describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};'
+const value = 'describe("addUser","a","bunch","of","useless","parameters", () => { it("should return an object", () => {console.log("Type your test cases here")}) }); function() { console.log("arrow syntax?")}; describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser","a","bunch","of","useless","parameters", () => { it("should return an object", () => {console.log("Type your test cases here")}) });'
 
 const mirror = (props) => {
   const [js, setJs] = useState('');
@@ -19,7 +19,7 @@ const mirror = (props) => {
     // console.log('useEffect', Date.now());
     console.log('printing out formatted js\n', js);
     console.log(typeof js);
-  })
+  },[])
 
   return (
     <div className='code'>

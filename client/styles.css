@@ -1,3 +1,23 @@
+.addTest{
+  height: 25px;
+  width: 100px;
+  float:right;
+  /* bg-light-green ma2 grow bw2 shadow-5 */
+}
+.deleteTest{
+  height: 25px;
+  width: 100px;
+  float:right;
+  /* bg-light-green ma2 grow bw2 shadow-5 */
+}
+.Func{
+  position: relative;
+  justify-content: right;
+  float:left;
+  background:lightblue;
+  width: 300px;
+}
+
 .wrapper{
 }
 

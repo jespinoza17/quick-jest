@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 function Func(props) {
+  const { funcArray, setFunc, setTest, inputTest } = props
   const handleDelete = ()=>{
     console.log('deleting shit')
   }
