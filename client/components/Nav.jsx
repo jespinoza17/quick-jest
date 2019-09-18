@@ -14,6 +14,11 @@ export default function Nav() {
     <nav className = 'main-nav'>
       <ul>
         {navItems}
+       
+          <button id = 'add-func'>
+            Add a function
+          </button>
+   
       </ul>
     </nav>
   )
