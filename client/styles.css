@@ -59,7 +59,7 @@
 }
 
 .main-nav ul {
-  background: pink;
+  background: white;
   display:grid;
   grid-gap:20px;
   justify-items:center;

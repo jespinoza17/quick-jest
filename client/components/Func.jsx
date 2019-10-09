@@ -18,12 +18,12 @@ function Func(props) {
 
   return(
    <div className ='Func dib br3 pa3 ma2 bw2 shadow-5'>
-      <input id="name" className="input-reset ba b--black-20 pa2 mb2 db w-100" 
-      type="text" aria-describedby="name-desc" onChange={(e)=>{  
+      <input id="name" className="input-reset ba b--black-20 pa2 mb2 db w-100"
+      type="text" aria-describedby="name-desc" onChange={(e)=>{
        props.setTest(e.target.value);
       }}>
       </input>
-      
+
       <button className='addTest bg-light-green ma2 grow bw2 shadow-5' onClick={addTest}>
         add test
       </button>
@@ -33,8 +33,8 @@ function Func(props) {
       <h3>
         {props.name}
       </h3>
-      {testArr} 
-        
+      {testArr}
+
     </div>
   )
 }
