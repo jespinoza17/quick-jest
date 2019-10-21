@@ -17,4 +17,5 @@ const formatString = (funcArray) => {
   return beautify(str, {indent_size: 2});
 }
 
-export default formatString;
+// export default formatString;
+module.exports = formatString;

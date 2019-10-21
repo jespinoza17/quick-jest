@@ -6,7 +6,8 @@
   "scripts": {
     "start": "NODE_ENV=production nodemon server/server.js",
     "build": "webpack",
-    "dev": "NODE_ENV=development webpack-dev-server --open & yarn start"
+    "dev": "NODE_ENV=development webpack-dev-server --open & yarn start",
+    "test": "jest"
   },
   "repository": "https://github.com/atreeleaf/QuickJest.git",
   "author": "Andrew Tang, Jimmy Deng, Juan Espinoza",
@@ -15,6 +16,7 @@
     "codemirror": "^5.48.4",
     "codemirror-formatting": "^1.0.0",
     "express": "^4.17.1",
+    "jest": "^24.9.0",
     "js-beautify": "^1.10.2",
     "react": "^16.9.0",
     "react-codemirror": "^1.0.0",
