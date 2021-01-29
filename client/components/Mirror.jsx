@@ -1,39 +1,59 @@
 import React, {useState, useEffect} from 'react';
-// import {UnControlled as CodeMirror} from 'react-codemirror2'
 import CodeMirror from 'react-codemirror';
 
-import 'codemirror/theme/dracula.css';
+import 'codemirror/theme/mdn-like.css';
 import 'codemirror/mode/javascript/javascript.js';
-
-let beautify = require('js-beautify').js;
-
-const value = 'describe("addUser","a","bunch","of","useless","parameters", () => { it("should return an object", () => {console.log("Type your test cases here")}) }); function() { console.log("arrow syntax?")}; describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};describe("addUser", () => { it("should return an object") }); function() { console.log("arrow syntax?")};'
+import  FileSaver from 'file-saver';
+import formatString from '../stringFormat.js';
 
 const mirror = (props) => {
   const [js, setJs] = useState('');
-  // let date = new Date();
-
+  const {funcArray } = props;
   useEffect(() => {
-    let formattedJs = beautify(value, {indent_size: 2});
-    setJs(formattedJs);
-    // console.log('useEffect', Date.now());
-    console.log('printing out formatted js\n', js);
-    console.log(typeof js);
+
+    let formattedJs = formatString(funcArray);
+    setJs(formattedJs)
   })
 
+  const fetchAndDownload = (formattedString) => {
+    console.log(formattedString)
+    fetch('/generate', {
+      method: 'POST',
+      mode: 'cors',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({formattedString})
+    })
+    .then((file)=>{
+      return file.blob()      
+      // download the file
+    })
+    .then((blob)=>{
+      return FileSaver.saveAs(blob,"quickjest.test.js")
+    })
+    .catch((e=>console.log('unable to generate file', e)))
+  } 
+
   return (
-    <div id='mirror'>
+    <div className='code'>
       <CodeMirror
         options={{
           value: js,
           mode: 'javascript',
-          theme: 'dracula',
+          theme: 'mdn-like',
           lineNumbers: true,
           readOnly: true,
           tabsize: 2,
-          lineWrapping: true
+          lineWrapping: true,
+          autoRefresh:true,
         }}
       />
+      <div className = 'code'>
+        <div className = 'code-bottom'>
+          <button id = 'generate-btn' onClick = {()=>fetchAndDownload(js)}>Generate Jest Tests</button>
+        </div>
+      </div>
     </div>
   )
 }
